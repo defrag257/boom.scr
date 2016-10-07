@@ -90,13 +90,13 @@ void Render()
 		}
 		else
 		{
-			SetWindowText(g_hWnd, TEXT("FAILED - Format is not X8R8G8B8."));
+			DestroyWindow(g_hWnd);
 		}
 		backbuffer->lpVtbl->Release(backbuffer);
 	}
 	else
 	{
-		SetWindowText(g_hWnd, TEXT("FAILED - GetBackBuffer failed"));
+		DestroyWindow(g_hWnd);
 	}
 
 	g_pdev->lpVtbl->Present(g_pdev, NULL, NULL, NULL, NULL);
