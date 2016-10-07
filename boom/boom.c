@@ -87,6 +87,10 @@ void Render()
 				FillScreen(desc, lockedrect);
 				backbuffer->lpVtbl->UnlockRect(backbuffer);
 			}
+			else
+			{
+				DestroyWindow(g_hWnd);
+			}
 		}
 		else
 		{
